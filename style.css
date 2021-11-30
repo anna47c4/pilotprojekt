@@ -1,0 +1,209 @@
+img {
+  width: 100%;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  background-color: darkslateblue;
+}
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-image: url(baggrund.webp);
+  background-size: cover;
+  background-position: 54% 85%;
+}
+
+.intro h1 {
+  font-family: PT Serif Caption, sans-serif;
+  color: rgb(255, 255, 0);
+  text-shadow: 4px 2px 2px black;
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 2rem;
+}
+
+.intro p {
+  font-family: PT Serif Caption, sans-serif;
+  color: rgb(255, 255, 0);
+  font-weight: lighter;
+  grid-column: 2/3;
+  grid-row: 2;
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 40px;
+  padding: 40px;
+}
+
+/*************************************** layout-tilpasning *****************************************/
+@media (min-width: 800px) {
+  .about {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+  }
+  .tekst {
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .daniel_figur {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .about h2 {
+    padding-bottom: 0%;
+  }
+
+  .about p {
+    padding-top: 0%;
+  }
+}
+
+@media (min-width: 600px) {
+  .intro h1 {
+    font-size: 5rem;
+  }
+
+  .intro p {
+    font-size: 1.5rem;
+    grid-row: 3;
+    text-align: center;
+    margin: 15px;
+    padding: 15px;
+    text-decoration: 2px lawngreen underline;
+  }
+
+  .layoutdiagram h3 {
+    font-size: 3rem;
+  }
+
+  .layoutdiagram img {
+    align-items: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  .layoutdiagram {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/*************************************** andre 'about' indstillinger *****************************************/
+
+.about {
+  background-color: navy;
+  margin: 20px;
+  padding: 20px;
+}
+
+.tekst {
+  outline: 2px dotted lawngreen;
+}
+
+.about h2 {
+  margin: 30px;
+  padding: 30px;
+  padding-bottom: 1px;
+  font-family: PT Serif Caption, sans-serif;
+  color: dodgerblue;
+  font-size: 1.2rem;
+  text-decoration: lawngreen solid underline;
+  text-underline-offset: 10px;
+}
+
+.about p {
+  margin: 30px;
+  padding: 30px;
+  padding-top: 1px;
+  font-family: PT Serif Caption, sans-serif;
+  color: rgb(120, 178, 233);
+  font-size: 0.9rem;
+}
+
+.daniel {
+  box-shadow: 4px 2px 2px lawngreen;
+  filter: brightness(120%);
+}
+
+/*************************************** video tilpasninger *****************************************/
+.video1 {
+  margin: 5px;
+  padding: 5px;
+}
+
+.video2 {
+  margin: 5px;
+  padding: 5px;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+/*************************************** galleri *****************************************/
+
+.galleri {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+  background-color: navy;
+  margin: 10px;
+  padding: 10px;
+}
+.gallery {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.gallery img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(110%);
+  box-shadow: 4px 2px 2px lawngreen;
+}
+
+/*************************************** layoutdiagram *****************************************/
+
+.layoutdiagram {
+  background-color: rgb(4, 4, 56);
+  margin: 10px;
+  padding: 10px;
+}
+
+.layoutdiagram h3 {
+  font-family: "monoton", sans-serif;
+  color: dodgerblue;
+  text-align: center;
+}
+
+.layoutdiagram img {
+  width: 70%;
+  margin: 30px;
+  padding: 30px;
+  outline: 3px solid lawngreen;
+}
+
+/*************************************** footer *****************************************/
+
+footer p {
+  font-family: "monoton", sans-serif;
+  font-size: 0.7rem;
+  margin: 10px;
+  padding: 10px;
+  color: navy;
+}
