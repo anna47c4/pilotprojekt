@@ -93,7 +93,7 @@ body {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1500px) {
   .layoutdiagram {
     display: flex;
     justify-content: center;
